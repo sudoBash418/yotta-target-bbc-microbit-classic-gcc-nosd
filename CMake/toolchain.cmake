@@ -38,3 +38,7 @@ function(yotta_apply_target_rules target_type target_name)
         )
     endif()
 endfunction()
+
+
+# tell CMake to generate compile_commands.json, which is helpful for rich IDE features
+set(CMAKE_EXPORT_COMPILE_COMMANDS true)
