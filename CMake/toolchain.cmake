@@ -15,6 +15,9 @@ add_definitions("-DNRF51 -DTARGET_NORDIC -DTARGET_M0 -D__MBED__=1 -DMCU_NORDIC_1
 # append non-generic flags, and set NRF51822-specific link script
 set(_CPU_COMPILATION_OPTIONS "-mcpu=cortex-m0 -mthumb -D__thumb2__")
 
+# add -pipe for slightly faster builds and less I/O
+set(_CPU_COMPILATION_OPTIONS "${_CPU_COMPILATION_OPTIONS} -pipe")
+
 set(CMAKE_C_FLAGS_INIT             "${CMAKE_C_FLAGS_INIT} ${_CPU_COMPILATION_OPTIONS} -fwrapv")
 set(CMAKE_ASM_FLAGS_INIT           "${CMAKE_ASM_FLAGS_INIT} ${_CPU_COMPILATION_OPTIONS}")
 set(CMAKE_CXX_FLAGS_INIT           "${CMAKE_CXX_FLAGS_INIT} ${_CPU_COMPILATION_OPTIONS} -fwrapv -std=c++17")

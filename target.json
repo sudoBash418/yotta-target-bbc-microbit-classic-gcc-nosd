@@ -1,6 +1,6 @@
 {
   "name": "bbc-microbit-classic-gcc-nosd",
-  "version": "0.2.3-sb2",
+  "version": "0.2.3-sb3",
   "description": "Official mbed build target for the BBC micro:bit, using the armgcc toolchain, without Softdevice.",
   "licenses": [
     {
